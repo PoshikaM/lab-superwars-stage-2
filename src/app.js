@@ -26,13 +26,14 @@ const initPlayers = (players) => {
     let detailedPlayers = [];
     // Create players using for loop
     // Type your code here
-    for(i=0; i<players.length; i++){
-        detailedPlayers.push = ({
+    for(let i=0; i<players.length; i++){
+        detailedPlayers.push({
         name: players[i],
         strength: getRandomStrength(),
         img: "images/super-"+(i+1)+".png"
         })
     }
+
 
     return detailedPlayers;
 }
@@ -41,7 +42,7 @@ const initPlayers = (players) => {
 const getRandomStrength = () => {
     // Return a random integer (0,100]
     // Note: You can use Math.random() and Math.ceil()
-    return Math.floor(Math.random()*100)+1;
+    return Math.floor(Math.random()*100);
 }
 
 const buildPlayers = (players, type) => {
